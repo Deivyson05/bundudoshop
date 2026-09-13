@@ -14,6 +14,11 @@ export const dataSourceOptions: DataSourceOptions = {
   ssl: { rejectUnauthorized: false },
   // Nunca usar synchronize em producao: as tabelas sao geridas por migrations.
   synchronize: true,
+  extra: {
+    max: 1,
+    connectionTimeoutMillis: 10_000,
+    idleTimeoutMillis: 30_000,
+  },
 };
 
 const dataSource = new DataSource(dataSourceOptions);
