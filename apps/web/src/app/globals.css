@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-50 text-ink-900 antialiased dark:bg-ink-950 dark:text-ink-100;
+  }
+
+  /* Foco visivel para navegacao por teclado, sem depender de outline padrao do browser */
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-garimpo-500;
+  }
+}
