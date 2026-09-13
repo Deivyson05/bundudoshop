@@ -13,7 +13,7 @@ export const dataSourceOptions: DataSourceOptions = {
   // certificado gerenciado que o driver pg nao valida por padrao.
   ssl: { rejectUnauthorized: false },
   // Nunca usar synchronize em producao: as tabelas sao geridas por migrations.
-  synchronize: true,
+  synchronize: false,
   extra: {
     max: 1,
     connectionTimeoutMillis: 10_000,
